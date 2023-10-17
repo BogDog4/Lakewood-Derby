@@ -1,5 +1,1 @@
-<<<<<<< Updated upstream
-C:\Users\Brama\Racer64
-=======
-C:\Users\brama\Documents\Unreal Projects\Cosmara\Lakewood-Derby\Racer64
->>>>>>> Stashed changes
+C:\Users\Maddie\Documents\Unity Projects\Lakewood-Derby\Racer64
