@@ -38,6 +38,11 @@ public class GhostScript : MonoBehaviour
             distance = new Vector3 (0,0,0);
             i++;
         }
+
+        if (i >= 9)
+        {
+            i = 0;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
