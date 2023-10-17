@@ -358,6 +358,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/DrivingScript.cs"
 "Assets/Scripts/GhostScript.cs"
+"Assets/Scripts/WheelController.cs"
 -langversion:9.0
 
 /deterministic
