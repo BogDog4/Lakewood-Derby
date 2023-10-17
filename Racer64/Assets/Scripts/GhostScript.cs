@@ -9,11 +9,12 @@ public class GhostScript : MonoBehaviour
     public int i = 0;
     public float elapsedTime;
     public Rigidbody ghostRB;
+    public Vector3 distance;
 
     // Start is called before the first frame update
     void Start()
     {
-        //ghostRB = GetComponent<Rigidbody>();
+        ghostRB = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -24,12 +25,24 @@ public class GhostScript : MonoBehaviour
         elapsedTime += Time.deltaTime;
         float percentageComplete = elapsedTime / 15;
 
-        transform.position = Vector3.Lerp(transform.position, navnodes[i].position, percentageComplete);
+        //transform.position = Vector3.Lerp(transform.position, navnodes[i].position, percentageComplete);
 
-        //ghostRB.AddForce(transform.forward * 25 * 25 * Time.deltaTime, ForceMode.Acceleration);
+        ghostRB.AddForce(transform.forward * 25 * 25 * Time.deltaTime, ForceMode.Acceleration);
+
+        distance = navnodes[i].position - transform.position;
         
 
-        if (transform.position == navnodes[i].position)
+        if (elapsedTime > 7)
+        {
+            elapsedTime = 0;
+            distance = new Vector3 (0,0,0);
+            i++;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "node")
         {
             i++;
         }
