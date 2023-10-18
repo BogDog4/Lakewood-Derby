@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraScript : MonoBehaviour
 {
     public Transform player;
+    public Transform car;
     public float elapsedTime;
 
     public Vector3 offset;
@@ -22,11 +23,11 @@ public class CameraScript : MonoBehaviour
         elapsedTime += Time.deltaTime;
         float percentageComplete = elapsedTime / 15;
 
-        transform.LookAt(player);
+        transform.LookAt(car);
 
-        //transform.position = Vector3.Lerp(transform.position, player.position + offset, 0.1f);
+        //transform.position = Vector3.Lerp(transform.position, player.position, 0.1f);
 
-        transform.position = Vector3.SmoothDamp(transform.position, player.position + offset, ref velocity, 0.3f);
+        transform.position = Vector3.SmoothDamp(transform.position, player.position, ref velocity, 0.3f);
 
         //transform.RotateAround(player.position, transform.right, -Input.GetAxis("Mouse Y") * 5);
         //transform.RotateAround(player.position, transform.up, Input.GetAxis("Mouse X") * 5);
