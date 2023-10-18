@@ -37,7 +37,7 @@ public class WheelController : MonoBehaviour
         moveforward = acceleration * Input.GetAxis("Vertical");
         turnangle = maxturn * Input.GetAxis("Horizontal");
 
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.Space))
         {
             usebreaks = 10000;
         }else
