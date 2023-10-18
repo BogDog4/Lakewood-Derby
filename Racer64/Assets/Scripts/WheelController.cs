@@ -30,7 +30,7 @@ public class WheelController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space))
         {
-            usebreaks = 500;
+            usebreaks = 5000;
         }else
         {
             usebreaks = 0f;
