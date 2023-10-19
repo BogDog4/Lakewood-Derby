@@ -20,14 +20,14 @@ public class GhostScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(new Vector3(navnodes[i].position.x, transform.position.y, navnodes[i].position.z), Vector3.left);
+        transform.LookAt(new Vector3(navnodes[i].position.x, transform.position.y, navnodes[i].position.z));
 
         elapsedTime += Time.deltaTime;
         float percentageComplete = elapsedTime / 15;
 
         //transform.position = Vector3.Lerp(transform.position, navnodes[i].position, percentageComplete);
 
-        ghostRB.AddForce(transform.forward * 25 * 25 * Time.deltaTime, ForceMode.Acceleration);
+        ghostRB.AddForce(transform.forward * 25 * 16 * Time.deltaTime, ForceMode.Acceleration);
 
         distance = navnodes[i].position - transform.position;
         
@@ -36,12 +36,12 @@ public class GhostScript : MonoBehaviour
         {
             elapsedTime = 0;
             distance = new Vector3 (0,0,0);
-            i++;
+            //i++;
         }
 
         if (i >= 9)
         {
-            i = 0;
+            //i = 0;
         }
     }
 

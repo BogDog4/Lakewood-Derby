@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class WheelController : MonoBehaviour
 {
+    public Rigidbody rb;
+    public Transform com;
+
     public WheelCollider frontRight;
     public WheelCollider frontLeft;
     public WheelCollider backRight;
@@ -21,6 +24,12 @@ public class WheelController : MonoBehaviour
     private float usebreaks;
     private float turnangle;
 
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        //rb.centerOfMass = com.position;
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -30,7 +39,7 @@ public class WheelController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space))
         {
-            usebreaks = 5000;
+            usebreaks = 10000;
         }else
         {
             usebreaks = 0f;

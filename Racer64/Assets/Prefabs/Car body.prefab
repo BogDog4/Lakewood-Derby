@@ -78,7 +78,7 @@ WheelCollider:
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
   m_ForceAppPointDistance: 0
-  m_Mass: 20
+  m_Mass: 50
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -87,7 +87,7 @@ WheelCollider:
     m_AsymptoteValue: 0.5
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
+    m_ExtremumSlip: 1
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.75
@@ -140,7 +140,7 @@ WheelCollider:
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
   m_ForceAppPointDistance: 0
-  m_Mass: 20
+  m_Mass: 50
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -149,7 +149,7 @@ WheelCollider:
     m_AsymptoteValue: 0.5
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
+    m_ExtremumSlip: 1
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.75
@@ -184,12 +184,12 @@ Transform:
   m_GameObject: {fileID: 574412798687710278}
   m_LocalRotation: {x: -0, y: -0, z: 0.70710576, w: 0.70710784}
   m_LocalPosition: {x: -0.48599994, y: -0.25, z: -2.7340002}
-  m_LocalScale: {x: 0.3433691, y: 0.11371698, z: 0.3433691}
+  m_LocalScale: {x: 0.34336907, y: 0.113716975, z: 0.34336907}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6132255934852977754}
   m_Father: {fileID: 574412799725125758}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!114 &574412798687710285
 MonoBehaviour:
@@ -2764,7 +2764,7 @@ WheelCollider:
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
   m_ForceAppPointDistance: 0
-  m_Mass: 20
+  m_Mass: 50
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -2773,7 +2773,7 @@ WheelCollider:
     m_AsymptoteValue: 0.5
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
+    m_ExtremumSlip: 1
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.75
@@ -2826,7 +2826,7 @@ WheelCollider:
     targetPosition: 0.5
   m_SuspensionDistance: 0.3
   m_ForceAppPointDistance: 0
-  m_Mass: 20
+  m_Mass: 50
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
@@ -2835,7 +2835,7 @@ WheelCollider:
     m_AsymptoteValue: 0.5
     m_Stiffness: 1
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
+    m_ExtremumSlip: 1
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.75
@@ -4161,6 +4161,7 @@ Transform:
   - {fileID: 574412799665869972}
   - {fileID: 3952599587633824916}
   - {fileID: 1279956265}
+  - {fileID: 3490425138711310268}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5193,15 +5194,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfc7821234feeeb46af210024d71b510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  com: {fileID: 3490425138711310268}
   frontRight: {fileID: 574412799486577966}
   frontLeft: {fileID: 574412799335784717}
   backRight: {fileID: 574412798312990099}
   backLeft: {fileID: 574412798359486479}
-  frontRightTransform: {fileID: 574412799179283641}
-  frontLeftTransform: {fileID: 574412799499614160}
-  backRightTransform: {fileID: 574412799739928494}
-  backLeftTransform: {fileID: 574412798687710281}
-  acceleration: 500
+  frontRightTransform: {fileID: 6317133637257760612}
+  frontLeftTransform: {fileID: 2890457194910604009}
+  backRightTransform: {fileID: 3121682128877960212}
+  backLeftTransform: {fileID: 6132255934852977754}
+  acceleration: 450
   maxturn: 25
 --- !u!65 &8264991780653413370
 BoxCollider:
@@ -5281,8 +5284,8 @@ Transform:
   m_Children:
   - {fileID: 574412799499614160}
   - {fileID: 574412799179283641}
-  - {fileID: 574412798687710281}
   - {fileID: 574412799739928494}
+  - {fileID: 574412798687710281}
   m_Father: {fileID: 574412799651266482}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5320,7 +5323,7 @@ Transform:
   m_Children:
   - {fileID: 3121682128877960212}
   m_Father: {fileID: 574412799725125758}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!114 &574412799739928530
 MonoBehaviour:
@@ -6757,8 +6760,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2546547191744168019}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9698013, y: 0.536428, z: 1.0688207}
-  m_LocalScale: {x: 1.0332031, y: 3.1197627, z: 1.0332031}
+  m_LocalPosition: {x: 0.9698013, y: 0.5364259, z: 1.0688207}
+  m_LocalScale: {x: 1.0332034, y: 3.1197627, z: 1.0332034}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8335313495933593395}
@@ -6848,6 +6851,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &3647256053857242470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3490425138711310268}
+  m_Layer: 0
+  m_Name: CenterofMass
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3490425138711310268
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3647256053857242470}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 574412799651266482}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4436508314803985966
 GameObject:
   m_ObjectHideFlags: 0
@@ -7134,8 +7168,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8939461901199903179}
   m_LocalRotation: {x: 1, y: 0.0000028014183, z: -0.000000115899525, w: 0.0000029397424}
-  m_LocalPosition: {x: 0.9698004, y: 1.3894229, z: 0.96106505}
-  m_LocalScale: {x: 1.0332032, y: 3.1197627, z: 1.0332032}
+  m_LocalPosition: {x: 0.9698004, y: 1.389424, z: 0.96106505}
+  m_LocalScale: {x: 1.0332034, y: 3.1197627, z: 1.0332034}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7926101609878948127}
