@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/MaddieTestScene.unity
+- path: Assets/Scenes/racetrack.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
