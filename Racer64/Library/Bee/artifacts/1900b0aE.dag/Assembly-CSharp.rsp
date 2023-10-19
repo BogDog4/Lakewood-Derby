@@ -359,6 +359,7 @@
 "Assets/Scripts/CameraRotateScript.cs"
 "Assets/Scripts/CameraScript.cs"
 "Assets/Scripts/DrivingScript.cs"
+"Assets/Scripts/GhostCarSpawnerScript.cs"
 "Assets/Scripts/GhostScript.cs"
 "Assets/Scripts/WheelController.cs"
 -langversion:9.0

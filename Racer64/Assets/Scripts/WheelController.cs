@@ -31,6 +31,16 @@ public class WheelController : MonoBehaviour
     }
 
     // Update is called once per frame
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            transform.position = transform.position + new Vector3(0, 0.5f, 0);
+            transform.eulerAngles = new Vector3 (0,0,0);
+        }
+    }
+
     void FixedUpdate()
     {
 
