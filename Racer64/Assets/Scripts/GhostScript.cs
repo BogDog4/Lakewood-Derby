@@ -28,7 +28,7 @@ public class GhostScript : MonoBehaviour
 
         //transform.position = Vector3.Lerp(transform.position, navnodes[i].position, percentageComplete);
 
-        ghostRB.AddForce(transform.forward * 25 * 16 * Time.deltaTime, ForceMode.Acceleration);
+        ghostRB.AddForce(transform.forward * 25 * 19 * Time.deltaTime, ForceMode.Acceleration);
 
         distance = navnodes[i].position - transform.position;
         
