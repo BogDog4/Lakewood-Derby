@@ -23,10 +23,14 @@ public class WheelController : MonoBehaviour
     private float moveforward;
     private float usebreaks;
     private float turnangle;
+    public float playerYrotation;
+
+    public GhostCarSpawnerScript spawnerScript;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        spawnerScript = GameObject.Find("LapTrigger").GetComponent<GhostCarSpawnerScript>();
         //rb.centerOfMass = com.position;
     }
 
@@ -37,7 +41,8 @@ public class WheelController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             transform.position = transform.position + new Vector3(0, 0.5f, 0);
-            transform.eulerAngles = new Vector3 (0,0,0);
+            playerYrotation = transform.localRotation.eulerAngles.y;
+            transform.eulerAngles = new Vector3 (0,playerYrotation,0);
         }
     }
 
@@ -65,5 +70,13 @@ public class WheelController : MonoBehaviour
         
         frontLeft.steerAngle = turnangle;
         frontRight.steerAngle = turnangle;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "LapTrigger")
+        {
+            spawnerScript.SpawnCar();
+        }
     }
 }
