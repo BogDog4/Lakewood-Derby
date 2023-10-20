@@ -37,9 +37,11 @@ public class GhostCarSpawnerScript : MonoBehaviour
         if (!ifnight)
         {
             night += 1;
+            RenderSettings.skybox = nightSkybox;
             ifnight = true;
         }else
         {
+            RenderSettings.skybox = daySkybox;
             ifnight = false;
         }
 
