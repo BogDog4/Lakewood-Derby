@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -30,5 +31,10 @@ public class UIManager : MonoBehaviour
     {
         thirdMenu.GetComponent<Animator>().SetBool("MenuOpen", true);
         secondMenu.GetComponent<Animator>().SetBool("MenuOpen", false);
+    }
+
+    public void LonelyTownClick()
+    {
+        SceneManager.LoadScene("racetrack");
     }
 }
